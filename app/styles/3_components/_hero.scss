@@ -1,0 +1,54 @@
+$postalRed: #ff3a36;
+$postalBlue: #173782;
+$postalBorder: #e8e8e8;
+
+.hero {
+  display: inline-block;
+  padding: 40px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      border: 1px solid $postalBorder;
+      box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
+      display: flex;
+      font-family: $sans;
+      letter-spacing: 0px;
+      margin: 0;
+      padding: 37px 10px 14px;
+      position: relative;
+      &:before {
+        background: $postalBlue;
+        border-bottom: 3px solid $postalRed;
+        content: "";
+        height: 22px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      span.first {
+        color: $white;
+        font-size: 12px;
+        font-weight: 500;
+        left: 10px;
+        line-height: 23px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+      }
+      span.last {
+        color: #263238;
+        font-family: $rockSalt;
+        font-size: 30px;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "og": {
+    "title": "John's Jawns",
+    "site_name": "John's Jawns",
+    "description": "John's Jawns | Art | Philadelphia PA",
+    "image": ""
+  },
+  "about": {
+    "imageSrc": "/images/jjs-face.png",
+    "imageAlt": "John Coates | Philadelphia PA",
+    "description": "Hello, My Name is John Coates. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "hero": {
+    "header": "<span class=\"first\">John's</span><span class=\"last\">Jawns</span>"
+  },
+  "work": {
+    "background_image": "/images/ryan-bg-1.jpg",
+    "header": "Work",
+    "description": "I am a Senior UI Developer <a target=\"_blank\" href=\"http://wearegenuine.com\">@Genuine</a> in Boston, MA. In a typical days work I lead front-end projects, collaborate with teams and always look for ways to improve my code. I have been a front-end developer for over 6+ years.",
+    "list_header": "Skill Set",
+    "list": [
+      {
+        "content": "HTML5"
+      },
+      {
+        "content": "Twig"
+      },
+      {
+        "content": "CSS3"
+      },
+      {
+        "content": "SCSS"
+      },
+      {
+        "content": "LESS"
+      },
+      {
+        "content": "Javascript"
+      },
+      {
+        "content": "jQuery"
+      },
+      {
+        "content": "AJAX"
+      },
+      {
+        "content": "JSON"
+      },
+      {
+        "content": "Angular"
+      },
+      {
+        "content": "React"
+      },
+      {
+        "content": "PHP"
+      },
+      {
+        "content": "Drupal"
+      },
+      {
+        "content": "Wordpress"
+      },
+      {
+        "content": "Photoshop"
+      },
+      {
+        "content": "Sketch"
+      },
+      {
+        "content": "Gulp"
+      },
+      {
+        "content": "GIT"
+      }
+    ],
+    "cta": {
+      "link": "mailto:rcoat661@gmail.com",
+      "text": "Let's Chat"
+    }
+  },
+  "contact": {
+    "imageSrc1": "/images/full-jawn-1.jpg",
+    "imageSrc2": "/images/full-jawn-2.jpg",
+    "imageSrc3": "/images/full-jawn-3.jpg",
+    "header": "Connect",
+    "description": "Feel free to connect with me on social media or click \"Let's Chat\" if you want to email me!",
+    "socialItems": [
+      {
+        "link": "https://www.facebook.com/ryan.c.coates",
+        "class": "facebook"
+      },
+      {
+        "link": "https://www.instagram.com/ryanccoates/",
+        "class": "instagram"
+      },
+      {
+        "link": "https://www.linkedin.com/in/ryanccoates/",
+        "class": "linkedin"
+      },
+      {
+        "name": "Lets Chat",
+        "link": "mailto:rcoat661@gmail.com"
+      }
+    ]
+  }
+}

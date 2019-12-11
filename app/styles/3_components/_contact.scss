@@ -1,0 +1,102 @@
+.contact {
+  background-color: $white;
+  display: inline-block;
+  margin: 30px 0;
+  width: 100%;
+  @include breakpoint($tablet) {
+    margin: 60px 0;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  &__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint($desktop) {
+      flex-basis: 33.33%;
+      max-width: 33.33%;
+      padding-bottom: 40%;
+    }
+
+    @include breakpoint(max-width $desktop - 1) {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding-bottom: 50%;
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @include breakpoint(max-width $tablet - 1) {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-bottom: 100%;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    left: 50%;
+    padding: 24px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    p {
+      color: $white;
+      font-size: 24px !important;
+      line-height: 28px !important;
+      text-transform: unset;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 100;
+      span {
+        display: block;
+        font-family: $rockSalt;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+    }
+    a.btn {
+      background: #5160b2;
+      border: 1px solid #5160b2;
+      color: $white;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      line-height: 20px;
+      padding: 20px 40px;
+      transition: background .15s ease, border-color .15s ease;
+
+      &:hover {
+        background: #001355;
+        border-color: #001355;
+      }
+    }
+  }
+}
