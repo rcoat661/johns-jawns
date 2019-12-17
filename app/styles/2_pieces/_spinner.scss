@@ -4,17 +4,30 @@
   margin: 0 auto 0;
   text-align: center;
   width: 100%;
+  height: 125px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 70px;
 }
 
 .spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: $brand;
-
+  width: 98px;
+  height: 98px;
+  background-color: #ff806e;
+  border: 2px solid #fff;
+  background-image: url('/images/jjs-face--b-and-w.png');
+  background-size: 60%;
+  border-radius: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  margin: 0 8px;
 }
 
 .spinner .bounce1 {

@@ -11,14 +11,10 @@ module.exports = {
   },
   modules: {
     aboutSection: require('./aboutSection/aboutSection.load'),
-    accordion: require('./accordion/accordion.load'),
+    contactSection: require('./contactSection/contactSection.load'),
     equalHeight: require('./equalHeight/equalHeight.load'),
+    heroSection: require('./heroSection/heroSection.load'),
     footer: require('./footer/footer.load'),
-    hamburgerMenu: require('./hamburgerMenu/hamburgerMenu.load'),
-    headerScroll: require('./headerScroll/headerScroll.load'),
-    movingBG: require('./movingBG/movingBG.load'),
-    musicSection: require('./musicSection/musicSection.load'),
-    scrollSmooth: require('./scrollSmooth/scrollSmooth.load'),
     workSection: require('./workSection/workSection.load')
   }
 

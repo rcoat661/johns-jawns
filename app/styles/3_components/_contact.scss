@@ -1,10 +1,10 @@
 .contact {
   background-color: $white;
-  display: inline-block;
-  margin: 30px 0;
+  display: block;
+  margin: 30px 0 0;
   width: 100%;
   @include breakpoint($tablet) {
-    margin: 60px 0;
+    margin: 60px 0 0;
   }
   .wrapper {
     display: flex;
@@ -82,21 +82,111 @@
       }
     }
     a.btn {
-      background: #5160b2;
-      border: 1px solid #5160b2;
+      background: #ff806e;
+      border: 0;
       color: $white;
       display: inline-block;
       font-size: 20px;
       font-weight: 600;
       letter-spacing: 3px;
       line-height: 20px;
+      margin-top: 40px;
       padding: 20px 40px;
-      transition: background .15s ease, border-color .15s ease;
+      position: relative;
+      transition: background 0.3s cubic-bezier(0.17, 0.88, 0.32, 1.2);
 
       &:hover {
-        background: #001355;
-        border-color: #001355;
+        background: #ff9d8f;
       }
     }
+  }
+}
+
+$ease-out-back: cubic-bezier(0.17, 0.88, 0.32, 1.2);
+$delay: 0s;
+$score-delay: ($delay + 0.5s);
+
+.score-upload-success {
+  position: absolute;
+  width: 100%;
+  max-width:150px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100px;
+  z-index: 2;
+
+  &.animate {
+    .score-upload-success__hand {
+      animation: fade-hand-up 0.5s $delay $ease-out-back forwards;
+    }
+
+    .score-upload-success__thumb {
+      animation: rotate-thumb 0.5s ($delay + 0.1s) $ease-out-back forwards;
+      transform-box: fill-box;
+    }
+  }
+  &.no-animate {
+    .score-upload-success__hand {
+      animation: fade-hand-down 1.5s $delay $ease-out-back forwards;
+    }
+
+    .score-upload-success__thumb {
+      animation: rotate-thumb-down 0.8s ($delay + 0.5s) $ease-out-back forwards;
+      transform-box: fill-box;
+    }
+  }
+}
+
+.score-upload-success__hand {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.score-upload-success__thumb {
+  transform: rotate(60deg);
+  transform-origin: center 90%;
+}
+
+@keyframes rotate-thumb {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes rotate-thumb-down {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes fade-hand-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-hand-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }

@@ -34,7 +34,7 @@
       color: $white;
       line-height: 25px!important;
       a {
-        color: #fff;
+        color: $white;
       }
     }
     h2 {
@@ -72,7 +72,6 @@
     flex-wrap: wrap;
 
     .feed-item {
-      background: $grey--lightest;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -132,81 +131,6 @@
             position: relative;
             z-index: -1;
           }
-        }
-      }
-
-      .link {
-        display: inline-block;
-
-        a {
-          background: transparent;
-          border: 1px solid $white;
-          padding: 7px 20px;
-          color: $white;
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 20px;
-          letter-spacing: 0.5px;
-          transition: background-color .15s ease, color .15s ease;
-
-          &:hover {
-            background: $white;
-            color: $green--neon;
-          }
-        }
-      }
-
-      .likes {
-        display: inline-block;
-        height: 20px;
-        margin: 0 auto;
-        position: relative;
-        text-align: center;
-        vertical-align: middle;
-        width: 20px;
-        z-index: 1;
-
-        .count {
-          color: $white;
-          font-size: 8px;
-          margin-top: 0px;
-          font-weight: 700;
-          left: 0;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 100%;
-        }
-
-        .heart {
-          background-color: $red--neon;
-          display: inline-block;
-          height: 12px;
-          position: relative;
-          top: 0px;
-          transform: rotate(-45deg);
-          width: 12px;
-        }
-
-        .heart:before,
-        .heart:after {
-          content: "";
-          background-color: $red--neon;
-          border-radius: 50%;
-          height: 12px;
-          position: absolute;
-          width: 12px;
-        }
-
-        .heart:before {
-          top: -6px;
-          left: 0;
-        }
-
-        .heart:after {
-          left: 6px;
-          top: 0;
         }
       }
 

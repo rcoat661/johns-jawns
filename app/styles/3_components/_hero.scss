@@ -1,19 +1,16 @@
-$postalRed: #ff3a36;
-$postalBlue: #173782;
-$postalBorder: #e8e8e8;
-
 .hero {
   display: inline-block;
   padding: 40px 0;
   position: relative;
   text-align: center;
   width: 100%;
+  z-index: 1; 
   &__container {
     display: flex;
     align-items: center;
     justify-content: center;
     h1 {
-      border: 1px solid $postalBorder;
+      border: 1px solid $postalGrey;
       box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
       display: flex;
       font-family: $sans;
@@ -50,5 +47,23 @@ $postalBorder: #e8e8e8;
         line-height: 30px;
       }
     }
+  }
+
+  svg#johnsJawnsLogo {
+    &.done {
+      path#jawnsFill {
+        fill: #020200;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+
+  h1 {
+    display: none;
+  }
+
+  svg {
+    width: 170px;
+    height: auto;
   }
 }

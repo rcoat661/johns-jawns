@@ -87,6 +87,7 @@
     "spotify-web-api-node": "^2.3.6",
     "susy": "^2.2.12",
     "swiper": "^3.4.2",
+    "vivus": "^0.4.5",
     "waypoints": "^4.0.1",
     "whatwg-fetch": "^2.0.3"
   }

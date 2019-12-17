@@ -12,7 +12,7 @@ strong {
 
 p {
   @include font-size(16, 20);
-  color: $grey--light;
+  color: $black;
   font-family: $sans;
   font-weight: 400;
 }

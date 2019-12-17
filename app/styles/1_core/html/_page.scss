@@ -11,7 +11,7 @@
 }
 
 html {
-  background: $white;
+  background: #5260ac;
   font-size: 62.5%; // Sets up the Base 10 stuff
   height: 100%;
   // scroll-behavior: smooth;
@@ -24,6 +24,7 @@ html {
 
 body {
   @include font-size(18,24);
+  border: 25px solid #5260ac;
   color: $black;
   font-family: $fallbackSans;
   margin: 0;

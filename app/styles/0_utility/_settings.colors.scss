@@ -9,51 +9,28 @@
 }
 $palettes: (
   colors: (
-    black: (
-      light: #212121,
-      base: #263238
+    material: (
+      blueLight: #5160b2,
+      blueDark: #001355,
+      grey: #f5f5f5,
+      black: #313131
     ),
-    blue: (
-      facebook: #3b5998,
-      linkedin: #007bb5,
-      tottenham: #001C58
-    ),
-    green: (
-      neon: #45e687
-    ),
-    grey: (
-      lightest: #f3f3f3,
-      light: #ababab,
-      dark: #9ca5a8,
-      darkest: #898c8f
-    ),
-    orange: (
-      instagram: #e95950
-    ),
-    red:(
-      neon: #ff4d56
+    postal: (
+      red: #ff3a36,
+      blue: #173782,
+      grey: #e8e8e8
     ),
     white: (
-      base: #fff,
-      off: #f6f9fa
+      base: #fff
     )
   )
 );
-$black: palette(black, base);
-$black--light: palette(black, light);
-$blue--facebook: palette(blue, facebook);
-$blue--linkedin: palette(blue, linkedin);
-$blue--tottenham: palette(blue, tottenham);
-$green--neon: palette(green, neon);
-$grey--light: palette(grey, light);
-$grey--lightest: palette(grey, lightest);
-$grey--dark: palette(grey, dark);
-$grey--darkest: palette(grey, darkest);
-$offwhite: palette(white, off);
-$orange--instagram: palette(orange, instagram);
-$red--neon: palette(red, neon);
-$white: palette(white);
 
-// brand colors //
-$brand: #00BFA5;
-$brandDark: #06393A;
+$black: palette(material, black);
+$blue: palette(material, blueDark);
+$blueLight: palette(material, blueLight);
+$grey: palette(material, grey);
+$postalBlue: palette(postal, blue);
+$postalGrey: palette(postal, grey);
+$postalRed: palette(postal, red);
+$white: palette(white);

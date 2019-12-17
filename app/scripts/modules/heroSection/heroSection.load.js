@@ -2,7 +2,7 @@
 
 module.exports = ($el) => {
   require.ensure([], (require) => {
-    let Module = require('./headerScroll.main');
+    let Module = require('./heroSection.main');
     new Module($el);
   });
 };

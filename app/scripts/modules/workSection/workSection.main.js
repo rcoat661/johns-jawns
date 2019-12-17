@@ -16,8 +16,10 @@ module.exports = class WorkSection {
       dataType: 'json',
       success: (data) => {
         if (data) {
-          this.initLoadSuccess();
-          this.loadFeed($feed, data);
+          setTimeout(() => {
+            $el.find('.spinner').hide();
+            this.loadFeed($feed, data);
+          }, 1000)
           let accordionTrigger = this.$el.find('.accordion-trigger');
           accordionTrigger.each((index, item) => {
             let accordionContent = $(item).next();
@@ -63,10 +65,6 @@ module.exports = class WorkSection {
           </div>`);
       }
     }
-  }
-
-  initLoadSuccess() {
-    this.$spinner.hide()
   }
 
 };

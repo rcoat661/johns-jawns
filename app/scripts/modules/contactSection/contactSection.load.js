@@ -2,7 +2,7 @@
 
 module.exports = ($el) => {
   require.ensure([], (require) => {
-    let Module = require('./movingBG.main');
+    let Module = require('./contactSection.main');
     new Module($el);
   });
 };
