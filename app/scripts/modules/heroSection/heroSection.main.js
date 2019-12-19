@@ -14,7 +14,8 @@ module.exports = class HeroSection {
 
     new Vivus('johnsJawnsLogo', {
       start: 'autostart',
-      type: 'delayed',
+      type: 'sync',
+      pathTimingFunction: Vivus.EASE,
       animTimingFunction: Vivus.EASE,
       duration: 300
     }, myCallback)

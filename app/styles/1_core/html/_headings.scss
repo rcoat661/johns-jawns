@@ -18,7 +18,7 @@ h1, h2{
   letter-spacing: -2px;
   text-align: center;
   @include breakpoint($large-tablet) {
-    @include font-size(65,65);
+    @include font-size(55,55);
   }
 }
 

@@ -81,23 +81,38 @@
         margin-bottom: 20px;
       }
     }
-    a.btn {
-      background: #ff806e;
-      border: 0;
-      color: $white;
-      display: inline-block;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      line-height: 20px;
-      margin-top: 40px;
-      padding: 20px 40px;
+    .svg-wrapper {
+      margin-top: 60px;
       position: relative;
-      transition: background 0.3s cubic-bezier(0.17, 0.88, 0.32, 1.2);
+      margin: 0 auto;
+      width: 320px;
+    }
 
-      &:hover {
-        background: #ff9d8f;
-      }
+    .shape {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+      fill: #fff;
+      stroke: #ff806e;
+      border-bottom: 5px solid black;
+      transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+    }
+
+    .text {
+      font-family: $sans;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 1px;
+      color: $black;
+      top: -46px;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .svg-wrapper:hover .shape {
+      stroke-width: 5px;
+      stroke-dashoffset: 0;
+      stroke-dasharray: 760;
     }
   }
 }

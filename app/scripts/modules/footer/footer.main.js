@@ -12,20 +12,15 @@ module.exports = class Footer {
 
     yearEl.text(year);
 
-    let myCallback = function() {
-      svg.addClass('done')
-    }
-
-
     $(window).on('scroll', function() {
       if (svg.isInViewport() && !svg.hasClass('visible')) {
         svg.addClass('visible');
         new Vivus('cityJawn', {
           start: 'autostart',
-          type: 'sync',
+          type: 'delayed',
           animTimingFunction: Vivus.EASE,
-          duration: 500
-        }, myCallback);
+          duration: 300
+        });
       }
     });
 

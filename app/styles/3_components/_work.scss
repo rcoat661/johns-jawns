@@ -70,17 +70,73 @@
   #ig-feed {
     display: flex;
     flex-wrap: wrap;
+    &.done {
+      animation: slide-up 2s ease;
+    }
+    
 
     .feed-item {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+      border: 3px solid $black;
       flex-basis: 100%;
       margin: $spacing-unit 0;
       max-width: 100%;
       position: relative;
-      overflow: hidden;
+      transition: border-color 0.3s ease, background-position 0.3s ease;
+      @include breakpoint(max-width $tablet - 1) {
+        background-image: none!important;
+        border-color: $white;
+        background-position: 100% calc(100% - 60px);
+        &:after {
+          border-color: $black!important;
+        }
+      }
+
+      &:hover {
+        border-color: $white;
+        background-position: 100% calc(100% - 60px);
+        &:after {
+          border-color: $black;
+        }
+        .btn {
+          transform: translateY(0px);
+        }
+      }
+
+      a.btn {
+        background: $white;
+        bottom: 0;
+        height: 60px;
+        left: 0;
+        padding: 20px;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        transform: translateY(60px);
+        transition: transform 0.3s ease, color 0.3s ease;
+        @include breakpoint(max-width $tablet - 1) {
+          display: inline-block;
+          position: relative;
+          transform: translateY(0);
+        }
+        &:hover {
+          color: #ff806e;
+        }
+      }
+
+      &:after {
+        border: 3px solid $white;
+        content: "";
+        height: calc(100% + 6px);
+        left: -6px;
+        position: absolute;
+        top: -6px;
+        width: calc(100% + 6px);
+        transition: border-color 0.4s ease;
+      }
 
       @include breakpoint($tablet) {
         margin: 2%;
@@ -178,4 +234,16 @@
     }
   }
 
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
