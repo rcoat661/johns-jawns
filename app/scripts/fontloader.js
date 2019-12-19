@@ -14,6 +14,10 @@ const proxiRegular = new FontFaceObserver('proxima-nova', {
 const proxiBold = new FontFaceObserver('proxima-nova', {
   weight: 700
 });
+const rockSalt = new FontFaceObserver('rock-salt', {
+  weight: 400
+});
+
 html.classList.add('fonts-loading');
 
 /* Should reference any and all custom Font Families being used in our so we
@@ -23,6 +27,7 @@ Promise.all([
   proxiLight.load(),
   proxiRegular.load(),
   proxiBold.load(),
+  rockSalt.load(),
 ]).then(() => {
   html.classList.remove('fonts-loading');
   html.classList.add('fonts-loaded');

@@ -201,7 +201,7 @@ module.exports = class WorkSection {
           <div class="feed-item" style="background-image: url('${image}')">
             <div class="media-container">
               <img src="${image}" alt="${imageAlt}" />
-              <a href="${link}" target="_blank" class="btn" title="View Instagram Post">View Post</a>
+              <a href="${link}" target="_blank" class="btn" title="View Instagram Post">View Jawn</a>
             </div>
           </div>`);
       }
