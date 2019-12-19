@@ -86,6 +86,12 @@
       position: relative;
       margin: 0 auto;
       width: 320px;
+      @include breakpoint(max-width $tablet - 1) {
+        width: 300px;
+        svg {
+          width: 300px;
+        }
+      }
     }
 
     .shape {
@@ -96,6 +102,10 @@
       stroke: #ff806e;
       border-bottom: 5px solid black;
       transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+      @include breakpoint(max-width $tablet - 1) {
+        stroke-dashoffset: -440;
+        width: 300px;
+      }
     }
 
     .text {
