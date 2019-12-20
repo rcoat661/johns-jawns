@@ -7,9 +7,7 @@ module.exports = class AboutSection {
     this.$el = $el;
     
     $(window).on('load', () => {
-      setTimeout(() => {
-        this.$el.addClass('done');
-      }, 500);
+      this.$el.addClass('done');
     });
   
   }

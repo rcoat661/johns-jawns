@@ -17,7 +17,7 @@ module.exports = class HeroSection {
       type: 'sync',
       pathTimingFunction: Vivus.EASE,
       animTimingFunction: Vivus.EASE,
-      duration: 300
+      duration: 200
     }, myCallback)
   }
 

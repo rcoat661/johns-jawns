@@ -85,10 +85,10 @@
       max-width: 100%;
       position: relative;
       transition: border-color 0.3s ease, background-position 0.3s ease;
-      @include breakpoint(max-width $tablet - 1) {
+      @include breakpoint(max-width $desktop - 1) {
         background-image: none!important;
         border-color: $white;
-        background-position: 100% calc(100% - 60px);
+        background-position: 50% calc(100% - 60px);
         &:after {
           border-color: $black!important;
         }
@@ -96,7 +96,7 @@
 
       &:hover {
         border-color: $white;
-        background-position: 100% calc(100% - 60px);
+        background-position: 50% calc(100% - 60px);
         &:after {
           border-color: $black;
         }
@@ -117,6 +117,9 @@
         z-index: 1;
         transform: translateY(60px);
         transition: transform 0.3s ease, color 0.3s ease;
+        @include breakpoint(max-width $large-desktop - 1) {
+          transform: translateY(0px);
+        }
         @include breakpoint(max-width $tablet - 1) {
           display: inline-block;
           position: relative;
@@ -173,14 +176,7 @@
       .media-container {
         overflow: hidden;
         position: relative;
-
-        @include breakpoint($tablet) {
-          max-height: 433px;
-        }
-
-        @include breakpoint($desktop) {
-          max-height: 287px;
-        }
+        height: 100%;
 
         img {
           @include breakpoint($desktop) {
