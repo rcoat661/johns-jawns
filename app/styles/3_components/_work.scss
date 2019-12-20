@@ -85,13 +85,20 @@
       max-width: 100%;
       position: relative;
       transition: border-color 0.3s ease, background-position 0.3s ease;
+      height: 0;
+      padding-bottom: 24%;
       @include breakpoint(max-width $desktop - 1) {
         background-image: none!important;
         border-color: $white;
         background-position: 50% calc(100% - 60px);
+        padding-bottom: 51%;
         &:after {
           border-color: $black!important;
         }
+      }
+      @include breakpoint(max-width $tablet - 1) {
+        height: inherit;
+        padding-bottom: 0;
       }
 
       &:hover {
@@ -175,8 +182,12 @@
 
       .media-container {
         overflow: hidden;
-        position: relative;
+        position: absolute;
         height: 100%;
+        @include breakpoint(max-width $tablet - 1) {
+          position: relative;
+          height: inherit;
+        }
 
         img {
           @include breakpoint($desktop) {
